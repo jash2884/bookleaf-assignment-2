@@ -1,0 +1,6 @@
+*.pdf
+.env
+node_modules/
+.DS_Store
+docs/SUBMISSION.md
+SUBMISSION.md

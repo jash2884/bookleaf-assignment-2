@@ -1,0 +1,47 @@
+Create these data records (App data, development database). Do not change pages, workflows, fields or privacy rules. Leave the user/owner fields empty for now. Use exactly these values. Dates are calendar dates.
+
+AUTHOR records (author_code | name | email | phone | city | joined_date | total_books | total_earned | total_paid | total_pending | payout_status | last_payout_date):
+AUTH001 | Priya Sharma | priya.sharma@email.com | +91-98765-43210 | Mumbai | 2023-03-15 | 2 | 19908 | 16338 | 3570 | Overdue | 2025-10-15
+AUTH002 | Rohit Kapoor | rohit.kapoor@email.com | +91-87654-32109 | Delhi | 2022-11-08 | 2 | 84024 | 71000 | 13024 | Overdue | 2025-09-01
+AUTH003 | Ananya Reddy | ananya.reddy@email.com | +91-76543-21098 | Hyderabad | 2024-02-20 | 1 | 2546 | 0 | 2546 | Overdue | (leave empty)
+AUTH004 | Vikram Joshi | vikram.joshi@email.com | +91-65432-10987 | Pune | 2023-07-12 | 2 | 15195 | 11845 | 3350 | Overdue | 2025-08-20
+AUTH005 | Meera Nair | meera.nair@email.com | +91-54321-09876 | Kochi | 2023-01-05 | 2 | 25295 | 22240 | 3055 | Overdue | 2025-10-15
+AUTH006 | Arjun Malhotra | arjun.malhotra@email.com | +91-43210-98765 | Chandigarh | 2024-06-01 | 1 | 2464 | 0 | 2464 | Overdue | (leave empty)
+AUTH007 | Sneha Kulkarni | sneha.kulkarni@email.com | +91-32109-87654 | Bangalore | 2022-09-18 | 3 | 60865 | 53000 | 7865 | Overdue | 2025-10-15
+AUTH008 | Farhan Sheikh | farhan.sheikh@email.com | +91-21098-76543 | Lucknow | 2023-10-01 | 1 | 3120 | 3120 | 0 | Paid up | 2025-12-01
+AUTH009 | Kavita Deshmukh | kavita.deshmukh@email.com | +91-10987-65432 | Nagpur | 2024-04-10 | 2 | 850 | 0 | 850 | Overdue | (leave empty)
+AUTH010 | Diya Chatterjee | diya.chatterjee@email.com | +91-09876-54321 | Kolkata | 2023-05-22 | 2 | 29115 | 25000 | 4115 | Overdue | (leave empty)
+
+BOOK records, each linked (author field) to the Author with the given author_code (book_code | author_code | title | isbn | genre | stage | publication_date | mrp | royalty_per_copy | copies_sold | royalty_earned | royalty_paid | royalty_pending | last_payout_date | print_partner | available_on (list) | royalty_status):
+BK001 | AUTH001 | Whispers of the Ganges | 978-93-5XXXX-01-1 | Literary Fiction | Published & Live | 2023-06-20 | 399 | 35 | 342 | 11970 | 8400 | 3570 | 2025-10-15 | In-House | Amazon India, Flipkart, BookLeaf Store | Overdue
+BK002 | AUTH001 | The Saffron Diaries | 978-93-5XXXX-02-8 | Non-Fiction / Memoir | Published & Live | 2024-01-10 | 450 | 42 | 189 | 7938 | 7938 | 0 | 2025-12-01 | In-House | Amazon India, BookLeaf Store | Paid up
+BK003 | AUTH002 | Code & Karma | 978-93-5XXXX-03-5 | Self-Help / Technology | Published & Live | 2023-02-14 | 350 | 30 | 876 | 26280 | 21000 | 5280 | 2025-09-01 | Repro India | Amazon India, Flipkart, Amazon US, BookLeaf Store | Overdue
+BK004 | AUTH002 | Startup Sutra | 978-93-5XXXX-04-2 | Business / Entrepreneurship | Published & Live | 2024-05-22 | 499 | 48 | 1203 | 57744 | 50000 | 7744 | 2025-11-15 | In-House | Amazon India, Flipkart, Amazon US, Amazon UK, BookLeaf Store | Overdue
+BK005 | AUTH003 | Between Two Temples | 978-93-5XXXX-05-9 | Historical Fiction | Published & Live | 2024-07-05 | 425 | 38 | 67 | 2546 | 0 | 2546 | (leave empty) | Epitome Books | Amazon India, BookLeaf Store | Overdue
+BK006 | AUTH004 | Debugging Life | 978-93-5XXXX-06-6 | Self-Help | Published & Live | 2023-11-30 | 299 | 25 | 534 | 13350 | 10000 | 3350 | 2025-08-20 | In-House | Amazon India, Flipkart, BookLeaf Store | Overdue
+BK007 | AUTH004 | The Last Monsoon | 978-93-5XXXX-07-3 | Poetry | Published & Live | 2024-08-15 | 199 | 15 | 123 | 1845 | 1845 | 0 | 2025-12-01 | In-House | Amazon India, BookLeaf Store | Paid up
+BK008 | AUTH005 | Cardamom & Chaos | 978-93-5XXXX-08-0 | Contemporary Fiction | Published & Live | 2023-04-18 | 375 | 32 | 445 | 14240 | 14240 | 0 | 2025-12-01 | Repro India | Amazon India, Flipkart, BookLeaf Store | Paid up
+BK009 | AUTH005 | Letters from Lakshadweep | 978-93-5XXXX-09-7 | Travel / Non-Fiction | Published & Live | 2024-03-01 | 550 | 55 | 201 | 11055 | 8000 | 3055 | 2025-10-15 | In-House | Amazon India, Amazon US, BookLeaf Store | Overdue
+BK010 | AUTH006 | Turban Tales | 978-93-5XXXX-10-3 | Humor / Essays | Published & Live | 2024-09-10 | 325 | 28 | 88 | 2464 | 0 | 2464 | (leave empty) | In-House | Amazon India, BookLeaf Store | Overdue
+BK011 | AUTH007 | The Algorithm of Love | 978-93-5XXXX-11-0 | Romance | Published & Live | 2022-12-25 | 299 | 25 | 1567 | 39175 | 35000 | 4175 | 2025-11-15 | Repro India | Amazon India, Flipkart, Amazon US, BookLeaf Store | Overdue
+BK012 | AUTH007 | Ctrl+Alt+Delete My Ex | 978-93-5XXXX-12-7 | Romance / Humor | Published & Live | 2024-02-14 | 350 | 30 | 723 | 21690 | 18000 | 3690 | 2025-10-15 | In-House | Amazon India, Flipkart, BookLeaf Store | Overdue
+BK013 | AUTH007 | Midnight in Mysore | 978-93-5XXXX-13-4 | Thriller | Cover Design | (leave empty) | (leave empty) | (leave empty) | 0 | 0 | 0 | 0 | (leave empty) | (leave empty) | (empty list) | (leave empty)
+BK014 | AUTH008 | Ghazal of the Forgotten | 978-93-5XXXX-14-1 | Poetry / Urdu Literature | Published & Live | 2024-01-26 | 250 | 20 | 156 | 3120 | 3120 | 0 | 2025-12-01 | Epitome Books | Amazon India, BookLeaf Store | Paid up
+BK015 | AUTH009 | Raising Roots | 978-93-5XXXX-15-8 | Parenting / Non-Fiction | Typesetting | (leave empty) | (leave empty) | (leave empty) | 0 | 0 | 0 | 0 | (leave empty) | (leave empty) | (empty list) | (leave empty)
+BK016 | AUTH009 | The Nagpur Notebooks | 978-93-5XXXX-16-5 | Essays / Memoir | Published & Live | 2024-11-05 | 299 | 25 | 34 | 850 | 0 | 850 | (leave empty) | In-House | Amazon India, BookLeaf Store | Overdue
+BK017 | AUTH010 | Durga’s Daughters | 978-93-5XXXX-17-2 | Literary Fiction | Published & Live | 2023-10-15 | 475 | 45 | 612 | 27540 | 25000 | 2540 | 2025-11-15 | Repro India | Amazon India, Flipkart, Amazon US, BookLeaf Store | Overdue
+BK018 | AUTH010 | Howrah Nights | 978-93-5XXXX-18-9 | Crime / Thriller | Published & Live | 2025-01-20 | 399 | 35 | 45 | 1575 | 0 | 1575 | (leave empty) | In-House | Amazon India, BookLeaf Store | Overdue
+
+PAYOUT records (one per book that has been paid; link book by book_code and author by author_code) (book_code | author_code | amount | paid_on | note):
+BK001 | AUTH001 | 8400 | 2025-10-15 | Cumulative royalty paid to date (dataset provides totals only)
+BK002 | AUTH001 | 7938 | 2025-12-01 | Cumulative royalty paid to date (dataset provides totals only)
+BK003 | AUTH002 | 21000 | 2025-09-01 | Cumulative royalty paid to date (dataset provides totals only)
+BK004 | AUTH002 | 50000 | 2025-11-15 | Cumulative royalty paid to date (dataset provides totals only)
+BK006 | AUTH004 | 10000 | 2025-08-20 | Cumulative royalty paid to date (dataset provides totals only)
+BK007 | AUTH004 | 1845 | 2025-12-01 | Cumulative royalty paid to date (dataset provides totals only)
+BK008 | AUTH005 | 14240 | 2025-12-01 | Cumulative royalty paid to date (dataset provides totals only)
+BK009 | AUTH005 | 8000 | 2025-10-15 | Cumulative royalty paid to date (dataset provides totals only)
+BK011 | AUTH007 | 35000 | 2025-11-15 | Cumulative royalty paid to date (dataset provides totals only)
+BK012 | AUTH007 | 18000 | 2025-10-15 | Cumulative royalty paid to date (dataset provides totals only)
+BK014 | AUTH008 | 3120 | 2025-12-01 | Cumulative royalty paid to date (dataset provides totals only)
+BK017 | AUTH010 | 25000 | 2025-11-15 | Cumulative royalty paid to date (dataset provides totals only)
